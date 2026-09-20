@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juca Boxe - Treinamento, Técnica e Evolução</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#00E676',
+                        brandDark: '#121212',
+                        brandCard: '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brandDark text-white font-sans antialiased selection:bg-brandGreen selection:text-black">
+
+    <!-- HEADER / NAVBAR SÓLIDO -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#121212] border-b border-white/10 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <span class="text-2xl font-black italic tracking-wider text-white">JUCA <span class="text-brandGreen">BOXE</span></span>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wide">
+                <a href="#inicio" class="text-brandGreen transition-colors">INÍCIO</a>
+                <a href="#sobre" class="hover:text-brandGreen transition-colors">SOBRE</a>
+                <a href="#aulas" class="hover:text-brandGreen transition-colors">AULAS</a>
+                <a href="#galeria" class="hover:text-brandGreen transition-colors">GALERIA</a>
+                <a href="#contato" class="hover:text-brandGreen transition-colors">CONTATO</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <!-- CTA Header (WhatsApp) -->
+                <a href="https://wa.me/5511986242401?text=Olá%20Juca,%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20de%20boxe!" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-brandGreen text-black font-bold px-5 py-2.5 rounded-full text-sm hover:bg-emerald-400 transition-all shadow-lg shadow-brandGreen/20">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> AGENDAR
+                </a>
+
+                <!-- Botão Menu Hambúrguer -->
+                <button id="menu-btn" class="text-white text-2xl focus:outline-none p-2 bg-white/5 hover:bg-white/10 rounded-xl transition-colors border border-white/10" aria-label="Abrir Menu">
+                    <i class="fa-solid fa-bars text-brandGreen"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown do Hambúrguer -->
+        <div id="mobile-menu" class="hidden bg-[#121212] border-b border-white/10 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#inicio" class="mobile-link block text-base font-semibold hover:text-brandGreen transition-colors">INÍCIO</a>
+            <a href="#sobre" class="mobile-link block text-base font-semibold hover:text-brandGreen transition-colors">SOBRE</a>
+            <a href="#aulas" class="mobile-link block text-base font-semibold hover:text-brandGreen transition-colors">AULAS</a>
+            <a href="#galeria" class="mobile-link block text-base font-semibold hover:text-brandGreen transition-colors">GALERIA</a>
+            <a href="#contato" class="mobile-link block text-base font-semibold hover:text-brandGreen transition-colors">CONTATO</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (IMAGEM REDUZIDA) -->
+    <section id="inicio" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-brandDark via-[#161616] to-brandDark">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <p class="text-xs md:text-sm font-bold uppercase tracking-widest text-white/60">
+                    Treinamento <span class="text-brandGreen">•</span> Técnica <span class="text-brandGreen">•</span> Evolução
+                </p>
+                <h1 class="text-4xl sm:text-6xl font-black italic uppercase leading-none tracking-tight">
+                    Não importa onde você começa. <br>
+                    <span class="text-brandGreen">Importa até onde você pode chegar.</span>
+                </h1>
+                <p class="text-white/80 text-base md:text-lg max-w-xl">
+                    Treinamento personalizado de Boxe para todos os níveis. Mais do que aprender a bater. Aprenda a lutar.
+                </p>
+                <div class="pt-4">
+                    <a href="https://wa.me/5511986242401?text=Olá%20Juca,%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20de%20boxe!" target="_blank" class="inline-flex items-center gap-3 bg-brandGreen text-black font-extrabold px-8 py-4 rounded-full text-base hover:scale-105 transition-transform shadow-xl shadow-brandGreen/30">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> AGENDAR UMA AULA
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-hand-fist text-brandGreen text-xl"></i>
+                        <span class="text-xs font-bold uppercase">Técnica</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-dumbbell text-brandGreen text-xl"></i>
+                        <span class="text-xs font-bold uppercase">Condicionamento</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-brain text-brandGreen text-xl"></i>
+                        <span class="text-xs font-bold uppercase">Disciplina</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-arrow-trend-up text-brandGreen text-xl"></i>
+                        <span class="text-xs font-bold uppercase">Evolução</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Coluna da Imagem com tamanho max-w reduzido e centralizada -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative rounded-2xl overflow-hidden border-2 border-brandGreen/30 shadow-2xl shadow-brandGreen/10 max-w-sm w-full">
+                    <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80" alt="Atleta de Boxe Juca Boxe" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O PROFESSOR -->
+    <section id="sobre" class="py-20 bg-brandCard relative border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="image_2.png" alt="Treinador Juca Boxe" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-6">
+                <div>
+                    <span class="text-brandGreen font-bold tracking-widest text-xs uppercase">Sobre o</span>
+                    <h2 class="text-3xl md:text-4xl font-black italic uppercase">Juca Boxe</h2>
+                </div>
+                <p class="text-xl font-medium text-white/90 italic">
+                    "Mais do que aprender a bater. Aprenda a lutar."
+                </p>
+                <p class="text-white/70 leading-relaxed">
+                    Sou o Juca, professor de Boxe com experiência e paixão pelo que faço. Aqui no Juca Boxe, cada treino é pensado de acordo com o seu objetivo e nível. O treino trabalha técnica, condicionamento, coordenação, velocidade e disciplina, sempre com foco na sua evolução.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+                        <i class="fa-solid fa-award text-brandGreen text-xl"></i>
+                        <span class="text-sm font-bold">Professor de Boxe Profissional</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+                        <i class="fa-solid fa-user-check text-brandGreen text-xl"></i>
+                        <span class="text-sm font-bold">Treinamento Individualizado</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+                        <i class="fa-solid fa-users text-brandGreen text-xl"></i>
+                        <span class="text-sm font-bold">Para Todos os Níveis</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5">
+                        <i class="fa-solid fa-shield-halved text-brandGreen text-xl"></i>
+                        <span class="text-sm font-bold">Segurança e Respeito</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AULAS PARTICULARES -->
+    <section id="aulas" class="py-20 bg-brandDark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl md:text-5xl font-black italic uppercase">Aulas <span class="text-brandGreen">Particulares</span></h2>
+                <p class="text-white/70">Treinamento 100% personalizado de acordo com o seu objetivo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-brandCard p-8 rounded-2xl border border-white/5 hover:border-brandGreen/50 transition-all group">
+                    <span class="text-brandGreen font-black text-4xl block mb-4">01</span>
+                    <h3 class="text-lg font-bold uppercase mb-2 group-hover:text-brandGreen transition-colors">Boxe para Iniciantes</h3>
+                    <p class="text-white/60 text-sm">Comece do zero e aprenda os fundamentos básicos com segurança.</p>
+                </div>
+                <div class="bg-brandCard p-8 rounded-2xl border border-white/5 hover:border-brandGreen/50 transition-all group">
+                    <span class="text-brandGreen font-black text-4xl block mb-4">02</span>
+                    <h3 class="text-lg font-bold uppercase mb-2 group-hover:text-brandGreen transition-colors">Aperfeiçoamento Técnico</h3>
+                    <p class="text-white/60 text-sm">Aprimore golpes, combinações, movimentação de pernas e defesa.</p>
+                </div>
+                <div class="bg-brandCard p-8 rounded-2xl border border-white/5 hover:border-brandGreen/50 transition-all group">
+                    <span class="text-brandGreen font-black text-4xl block mb-4">03</span>
+                    <h3 class="text-lg font-bold uppercase mb-2 group-hover:text-brandGreen transition-colors">Condicionamento Físico</h3>
+                    <p class="text-white/60 text-sm">Melhore a sua resistência, força, velocidade e explosão muscular.</p>
+                </div>
+                <div class="bg-brandCard p-8 rounded-2xl border border-white/5 hover:border-brandGreen/50 transition-all group">
+                    <span class="text-brandGreen font-black text-4xl block mb-4">04</span>
+                    <h3 class="text-lg font-bold uppercase mb-2 group-hover:text-brandGreen transition-colors">Treinamento Personalizado</h3>
+                    <p class="text-white/60 text-sm">Aula totalmente adaptada ao seu objetivo pessoal e nível técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARA QUEM É? (SEM A IMAGEM) -->
+    <section class="py-20 bg-brandCard border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-6 space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl md:text-4xl font-black italic uppercase">Para <span class="text-brandGreen">Quem É?</span></h2>
+                <p class="text-white/70">Descubra se o treinamento se encaixa no que você procura.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start gap-4 p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-brandGreen text-2xl mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-white mb-1">Iniciante?</h4>
+                        <p class="text-white/60 text-sm">Comece do zero com acompanhamento individualizado e focado na base.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-brandGreen text-2xl mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-white mb-1">Já treina?</h4>
+                        <p class="text-white/60 text-sm">Aperfeiçoe a sua técnica e desenvolva novos recursos de combate.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-brandGreen text-2xl mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-white mb-1">Quer melhorar o condicionamento?</h4>
+                        <p class="text-white/60 text-sm">Use o boxe como modalidade completa de treino aeróbico e anaeróbico.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-6 rounded-2xl bg-black/30 border border-white/5">
+                    <i class="fa-solid fa-circle-check text-brandGreen text-2xl mt-1"></i>
+                    <div>
+                        <h4 class="font-bold uppercase text-white mb-1">Quer sair da rotina?</h4>
+                        <p class="text-white/60 text-sm">Um treino totalmente diferente, dinâmico, desafiador e divertido.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-black border border-brandGreen/30 text-center max-w-xl mx-auto">
+                <p class="text-lg font-black italic uppercase text-brandGreen">"Disciplina é o que te leva mais longe."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA COM AS SUAS FOTOS REAIS -->
+    <section id="galeria" class="py-20 bg-brandDark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-black italic uppercase">Galeria</h2>
+                    <p class="text-white/70">Alguns momentos dos treinos e da rotina de trabalho.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="rounded-xl overflow-hidden h-72 border border-white/10 group shadow-lg">
+                    <img src="image_2.png" alt="Treino Juca Boxe 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden h-72 border border-white/10 group shadow-lg">
+                    <img src="image_3.png" alt="Treino Juca Boxe 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden h-72 border border-white/10 group shadow-lg">
+                    <img src="image_4.png" alt="Treino Juca Boxe 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden h-72 border border-white/10 group shadow-lg">
+                    <img src="image_5.png" alt="Treino Juca Boxe 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTATO -->
+    <footer id="contato" class="py-16 bg-brandDark border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
+            <div>
+                <span class="text-2xl font-black italic tracking-wider text-white block mb-2">JUCA <span class="text-brandGreen">BOXE</span></span>
+                <p class="text-xs uppercase tracking-widest text-white/50">Sua evolução começa com uma luva.</p>
+            </div>
+            <div class="space-y-3 text-sm text-white/80">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-clock text-brandGreen"></i>
+                    <span>Horários mediante disponibilidade</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-location-dot text-brandGreen"></i>
+                    <span>Local dos treinos (a combinar)</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-phone text-brandGreen"></i>
+                    <span>Agende seu horário</span>
+                </div>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-4">
+                <a href="https://www.instagram.com/jucaboxe?stkn=MW16MTVyZXphNzZpZw==" target="_blank" class="flex items-center gap-2 text-sm font-bold hover:text-brandGreen transition-colors">
+                    <i class="fa-brands fa-instagram text-brandGreen text-lg"></i> @jucaboxe
+                </a>
+                <a href="https://wa.me/5511986242401?text=Olá%20Juca,%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20de%20boxe!" target="_blank" class="inline-flex items-center gap-3 bg-brandGreen text-black font-extrabold px-6 py-3 rounded-full text-sm hover:scale-105 transition-transform shadow-lg shadow-brandGreen/20">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> QUERO TREINAR COM O JUCA
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/5 text-center text-xs text-white/40">
+            &copy; 2026 Juca Boxe. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Script (Menu Hambúrguer) -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
